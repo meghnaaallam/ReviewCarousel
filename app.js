@@ -50,9 +50,9 @@ let cname=document.querySelector('.customer-name')
 let rating=document.querySelector('.stars')
 let moment=document.querySelector('.customer-date')
 
-//setting default review
-let defaultReview=0;
 
+let defaultReview=0;
+//setting default review
 window.addEventListener('DOMContentLoaded',quoteReset,false)
 
 function quoteReset() {
@@ -65,9 +65,11 @@ moment.innerText=reviews[defaultReview].time;
 
 nextBtn.addEventListener('click',nextReview,false)
 
-
+//more button displays nxt review
 function nextReview() {
     defaultReview++;
+
+    //reset the default value
     if(defaultReview>3) {
         defaultReview=0;
         quoteReset();
